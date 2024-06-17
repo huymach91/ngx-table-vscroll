@@ -1,0 +1,21 @@
+.table {
+    width: 600px;
+    border-collapse: 0;
+    border-spacing: 0;
+    border: none;
+}
+
+table, th, td {
+    border: 1px solid gray;
+}
+
+.sticky tr {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.footer {
+    height: 0;
+}

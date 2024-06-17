@@ -1,0 +1,26 @@
+{
+  "name": "ngx-table-vscroll",
+  "version": "1.0.0",
+  "node": "18.18.2",
+  "description": "A simple table with virtual scroll for Angular 17.3.0",
+  "peerDependencies": {
+    "@angular/common": "^17.3.0",
+    "@angular/core": "^17.3.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ngx-table-vscroll",
+    "ngx",
+    "virtual",
+    "scroll"
+  ],
+  "author": "huy.mach.webdev@gmail.com",
+  "license": "MIT"
+}
