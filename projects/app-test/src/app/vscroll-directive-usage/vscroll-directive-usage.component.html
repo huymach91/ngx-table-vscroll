@@ -8,7 +8,7 @@
             <tr>
                 <th>#</th>
                 <th>id</th>
-                <th>Full Name</th>
+                <th class="nowrap">Full Name</th>
                 <th>Age</th>
                 <th>Description</th>
             </tr>
@@ -31,8 +31,8 @@
 <ng-template #row let-data let-i="index" let-itemHeight="itemHeight">
     <tr style="height: 22px; background-color: white;">
         <td>{{i + 1}}</td>
-        <td>{{data?.id}}</td>
-        <td>{{data?.name}}</td>
+        <td class="nowrap">{{data?.id}}</td>
+        <td class="nowrap">{{data?.name}}</td>
         <td>{{data?.age}}</td>
         <td>{{data?.desc}}</td>
     </tr>
