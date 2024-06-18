@@ -11,6 +11,7 @@
                 <th class="nowrap">Full Name</th>
                 <th>Age</th>
                 <th>Description</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -35,6 +36,11 @@
         <td class="nowrap">{{data?.name}}</td>
         <td>{{data?.age}}</td>
         <td>{{data?.desc}}</td>
+        <td>
+            <div class="buttons">
+                <button (click)="onEditRow(data)">Edit</button> <button (click)="onDeleteRow(i)">Delete</button>
+            </div>
+        </td>
     </tr>
 </ng-template>
 <div class="footer"></div>

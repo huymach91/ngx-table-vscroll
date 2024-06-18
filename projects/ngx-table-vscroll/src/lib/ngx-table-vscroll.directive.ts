@@ -17,6 +17,7 @@ export class NgxTableVscrollDirective implements AfterViewInit, OnDestroy {
     private _sub: Subscription | undefined;
     private _start: number = 0;
     private _end: number = 0;
+    private _refresh: boolean = false;
 
     constructor(
         private viewContainerRef: ViewContainerRef,
@@ -72,9 +73,10 @@ export class NgxTableVscrollDirective implements AfterViewInit, OnDestroy {
             tfootElement.style.height = `${totalHeight}px`;
         }
         
-        if (startIndex !== this._start || endIndex !== this._end) {
+        if (startIndex !== this._start || endIndex !== this._end || this._refresh) {
             this._start = startIndex;
             this._end = endIndex;
+            this._refresh = false;
             this.viewContainerRef.clear();
             if (tbodyElement ) {
                 tbodyElement.style.transform = `translateY(${startIndex * itemHeight}px)`;
@@ -96,6 +98,7 @@ export class NgxTableVscrollDirective implements AfterViewInit, OnDestroy {
     private listenInputData() {
         effect(() => {
             const data = this.data();
+            this._refresh = true;
             this.handleVscroll();
         })
     }

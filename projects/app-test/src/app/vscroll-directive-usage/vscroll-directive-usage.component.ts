@@ -52,4 +52,15 @@ export class VscrollDirectiveUsageComponent implements OnInit {
         });
     }
 
+    public onEditRow(data: Item) {
+        data.desc = '';
+    }
+
+    public onDeleteRow(i: number) {
+        this.data.splice(i, 1);
+        console.log(this.data)
+        this.data = [...this.data];
+    }
+
+
 }

@@ -2,3 +2,40 @@
 .nowrap {
     white-space: nowrap;
 }
+
+.table {
+    width: 50%;
+    border-collapse: 0;
+    border-spacing: 0;
+    border: none;
+}
+
+table, th, td {
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+.sticky tr {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.footer {
+    height: 0;
+}
+
+.upper-content {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.buttons {
+    display: flex;
+    column-gap: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
