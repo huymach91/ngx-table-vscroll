@@ -1,0 +1,40 @@
+<h2>Employee List </h2>
+<div class="upper-content">
+    <a href="javascript:void()" (click)="onGenerate()">Generate Data</a> <input type="number" [(ngModel)]="totalData" placeholder="Total Data" (ngModelChange)="onGenerate()" />
+</div>
+<div #container>
+    <table class="table" >
+        <thead class="sticky">
+            <tr>
+                <th>#</th>
+                <th>id</th>
+                <th>Full Name</th>
+                <th>Age</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container NgxTableVscroll 
+                          [itemHeight]="112" 
+                          [topHeight]="86" 
+                          [footerHeight]="0" 
+                          [totalItems]="data.length" 
+                          [container]="container" 
+                          [template]="row" 
+                          [buffer]="4"
+                          [data]="data"></ng-container>
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+</div>
+
+<ng-template #row let-data let-i="index" let-itemHeight="itemHeight">
+    <tr style="height: 22px; background-color: white;">
+        <td>{{i + 1}}</td>
+        <td>{{data?.id}}</td>
+        <td>{{data?.name}}</td>
+        <td>{{data?.age}}</td>
+        <td>{{data?.desc}}</td>
+    </tr>
+</ng-template>
+<div class="footer"></div>

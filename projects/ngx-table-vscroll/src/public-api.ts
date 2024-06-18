@@ -3,3 +3,4 @@
  */
 
 export * from './lib/ngx-table-vscroll.directive';
+export * from './lib/ngx-table-vscroll.component';
